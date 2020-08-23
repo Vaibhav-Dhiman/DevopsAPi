@@ -36,6 +36,7 @@ namespace BooksApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBook(int id)
         {
+            // get book by id here
             var book = await _repo.GetBook(id);
             if (book != null)  
                return Ok(book);
